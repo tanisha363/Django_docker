@@ -1,0 +1,15 @@
+#This file contains all the configurations for all services that makeup the project.
+version: "3"
+
+#Here we have only 1 service-'app'
+#Volumes-
+services:
+    app:
+        build:
+            context: .
+        ports:
+            - "8000:8000"
+        volumes:
+            - ./app:/app
+        command: >
+         "python manage.py runserver 0.0.0.0:8000"
