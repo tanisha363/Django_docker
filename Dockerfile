@@ -13,7 +13,7 @@ RUN pip install -r /requirements.txt
 #Making a directory within docker image used to store web-app's source code.
 RUN mkdir /app
 WORKDIR /app
-COPY ./app /app
+COPY ./app /appdo
 
 #Creating separate User for the web-app
 #used to simply run the project prohibiting root access.
