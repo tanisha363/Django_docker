@@ -23,7 +23,5 @@ For Running Project
 SAMPLE1 - Runs the first Hyperlink
 
 For Building Docker Image
-1. docker build . (provided you are in the project's working directory)
-2. docker-compose build
-3. docker run -d -p 8000:8000 django_docker_app:latest
-
+**Provided you are in project's directory
+Run Command : docker-compose up
