@@ -23,5 +23,7 @@ For Running Project
 SAMPLE1 - Runs the first Hyperlink
 
 For Building Docker Image
+
 **Provided you are in project's directory
+
 Run Command : docker-compose up
