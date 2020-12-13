@@ -1,0 +1,24 @@
+pipeline { 
+    environment { 
+        dockerImage = '' 
+    }
+    agent any 
+    stages { 
+        stage('Cloning our Git') { 
+            steps { 
+                git 'https://github.com/tanisha363/Django_docker.git' 
+                echo "Cloned"
+            }
+        } 
+        stage('Building our image') { 
+            steps { 
+                script { 
+                    docker-compose up 
+                }
+                echo "Image Build and running"
+            } 
+        }
+        
+        } 
+    }
+}
