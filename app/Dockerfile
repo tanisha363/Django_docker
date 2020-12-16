@@ -15,5 +15,6 @@ RUN mkdir /app
 WORKDIR /app
 COPY requirements.txt /app/
 COPY ./app /
+EXPOSE 8090
 RUN pip install -r requirements.txt
 
