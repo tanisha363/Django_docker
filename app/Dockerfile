@@ -6,15 +6,14 @@ LABEL Tanisha Garg
 #To avoid complications when running the web-app
 ENV  PYTHONUNBUFFERED=1
 
-#Install dependencies
-#COPY ./requirements.txt /requirements.txt
-
-
 #Making a directory within docker image used to store web-app's source code.
 RUN mkdir /app
 WORKDIR /app
-COPY requirements.txt /app/
-COPY ./app /
-EXPOSE 8090
+#COPY requirements.txt /app/
+COPY . /app 
+EXPOSE 8000
 RUN pip install -r requirements.txt
+CMD [ "app.py"]
+
+
 
